@@ -11,7 +11,7 @@ class CommerceApp:
     def start_shopping(self):
         print(f"\n {'*' * 20} WELCOME TO ECAMART {'*' * 20}\n")
         
-        # FIX 1: Added () to call the method
+        # Now : self.storage = StorageSection()
         total_milk_stock = self.storage.milkcapacity() 
         
         try:
@@ -26,7 +26,7 @@ class CommerceApp:
             print(f"Sorry {user_input}, we are short of stock! Available: {total_milk_stock}L")
             return
 
-        # Get values from stock counter
+       # NOW YOU ENTER self.stock = StockCounter() 
         packs, remaining = self.stock.stock(qty_input, self.storage)
         
         # Calculation
@@ -45,7 +45,7 @@ class CommerceApp:
         self.storage.one_litre_milk -= packs[3]
         self.storage.five_hundred_ml_milk -= packs[4]
 
-        # Shortfall Logic
+        # Now you enter : self.short_quantity = QuantityShort()
         if remaining > 0:
             print(f"Notice: Exact quantity not available. Shortfall: {remaining}L")
             # FIX 2: Ensure this name matches your class method exactly
