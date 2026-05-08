@@ -24,6 +24,8 @@ def run(playwright: Playwright) -> None:
     page.locator("//*[@title='Search']").press("Enter")
     time.sleep(2)
     print("The program was executed successfully")
+    
+    #I added this comment to test the commit functionality of git
 
     # ---------------------
     context.close()
