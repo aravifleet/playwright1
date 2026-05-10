@@ -25,6 +25,9 @@ def run():
             browser.close()
     except Exception as e:
         print(f"Error running Playwright: {e}")
+        
+        
+# all goes well
 
 
 if __name__ == "__main__":
